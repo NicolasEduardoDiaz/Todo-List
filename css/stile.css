@@ -1,45 +1,49 @@
-*{
+* {
     background-color: #143543;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .title,
 .time,
-.placeholder_bar{
+.placeholder_bar {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.title{
+.title {
     font-size: 4rem;
+    margin: 20px 0;
 }
 
 .container h1,
 .time,
-.list{
+.list {
     color: #fff;    
 }
 
-.list{
+.list {
     display: flex;
     flex-direction: column;
     gap: 15px;
     font-size: 1.8rem;
     align-items: center;
-}
-
-.list{
-    text-decoration: none;
     list-style: none;
+    padding: 0;
 }
 
-.todo_information{
+.todo_information {
     overflow-y: scroll;
     height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.todo_information li{
+.todo_information li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +55,7 @@
     padding: 0 15px;
 }
 
-.todo_information li p{
+.todo_information li p {
     margin: 0;
     flex-grow: 1;
     text-align: left;
@@ -59,13 +63,13 @@
     color: #fff;
 }
 
-.input_container{ 
+.input_container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-button{
+button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,35 +82,49 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     filter: invert(1);
 }
 
-.got_this{
-    height: 25px;
+.Gotthis {
+    height: 45px;
     width: 100px;
     border-radius: 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    font-size: 1rem;
+    margin-left: -10px;
 }
 
-.placeholder_bar{
+.placeholder_bar {
     width: 500px;
-    height: 25px;
+    height: 45px;
     background-color: rgba(0, 0, 0, 0.56);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     color: #fff;
     padding: 10px;
+    font-size: 1rem;
+    border: none;
 }
 
 button.check_button,
-button.trash_button{
+button.trash_button {
     margin-left: 10px;
     padding: 5px 10px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
 }
 
-.completed{
+button.check_button:hover,
+button.trash_button:hover {
+    filter: invert(1);
+}
+
+.completed {
     text-decoration: line-through;
-    color: #aaaaaa42;
+    color: #aaaaaa;
 }

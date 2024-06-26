@@ -8,61 +8,32 @@
     <script type="module" src="js/main.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <header class="container">
         <h1 class="title">Just do it.</h1>
-        <div class="input_container">
-            <input type="text" id="todo_placeholder" placeholder="Add a Task." class="placeholder_bar"><button class="got_this">I Got This!</button>
-        </div>
-        <p class="time">21/6/2024, 6:31:29</p>
-        <div class="todo_information">
-            <ul class="list" id="task_list">
-                <li>
-                    <p>Todo List App</p>
-                    <button class="check_button">,</button>
-                    <button class="trash_button">🗑️</button>
-                </li>
-                <li>
-                    <p>Tarea 1</p>
-                    <button class="check_button">,</button>
-                    <button class="trash_button">🗑️</button>
-                </li>
-                <li>
-                    <p>Tarea 1</p>
-                    <button class="check_button">,</button>
-                    <button class="trash_button">🗑️</button>
-                </li>
-                <li>
-                    <p>Tarea 1</p>
-                    <button class="check_button">,</button>
-                    <button class="trash_button">🗑️</button>
-                </li>
-                <li>
-                    <p>Tarea 1</p>
-                    <button class="check_button">,</button>
-                    <button class="trash_button">🗑️</button>
-                </li>
-                <li>
-                    <p>Tarea 1</p>
-                    <button class="check_button">,</button>
-                    <button class="trash_button">🗑️</button>
-                </li>
-                <li>
-                    <p>Tarea 1</p>
-                    <button class="check_button">,</button>
-                    <button class="trash_button">🗑️</button>
-                </li>
-                <li>
-                    <p>Tarea 1</p>
-                    <button class="check_button">,</button>
-                    <button class="trash_button">🗑️</button>
-                </li>
-                <li>
-                    <p>Tarea 1</p>
-                    <button class="check_button">,</button>
-                    <button class="trash_button">🗑️</button>
-                </li>
+    </header>
+    <main class="main">
+        <section class="add_task">
+            <input type="text" id="task_input" placeholder="Add a Task.">
+            <button class="add_task" id="enter">I Got This!</button>
+        </section>
+        <section class="date">
+            <p class="date_time" id="time"></p>
+        </section>
+        <section class="task_list">
+            <ul class="task_listItem">
+                <!--<li class="tasks" data-id="1">
+                    <span class="todo_item">Example</span>
+                    <div class="button">
+                        <a href="" class="check-btn">
+                            <img src="storage/img/unnamed.png" alt="check">
+                        </a>
+                        <a href="" class="delete-btn">
+                            <img src="storage/img/images.png" alt="trash">
+                        </a>
+                    </div>
+                </li>-->
             </ul>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 </html>
