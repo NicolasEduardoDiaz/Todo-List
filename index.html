@@ -5,22 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List App</title>
     <link rel="stylesheet" href="css/stile.css">
-    <script src="js/main.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <div class="todo_app">
-            <h2>Todo List <img src="storage/img/icon.png" alt=""></h2>
-            <div class="row">
-                <input type="text" id="input_box" placeholder="Add you text">
-                <button onclick="addTask()">Add</button>
-            </div>
-            <ul id="list_container">
-                <!--<li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>-->
+        <h1 class="title">Just do it.</h1>
+        <div class="input_container">
+            <input type="text" id="todo_placeholder" placeholder="Add a Task." class="placeholder_bar"><button class="got_this">I Got This!</button>
+        </div>
+        <p class="time">21/6/2024, 6:31:29</p>
+        <div class="todo_information">
+            <ul class="list" id="task_list">
+                <li>
+                    <p>Todo List App</p>
+                    <button class="check_button">,</button>
+                    <button class="trash_button">🗑️</button>
+                </li>
+                <li>
+                    <p>Tarea 1</p>
+                    <button class="check_button">,</button>
+                    <button class="trash_button">🗑️</button>
+                </li>
+                <li>
+                    <p>Tarea 1</p>
+                    <button class="check_button">,</button>
+                    <button class="trash_button">🗑️</button>
+                </li>
+                <li>
+                    <p>Tarea 1</p>
+                    <button class="check_button">,</button>
+                    <button class="trash_button">🗑️</button>
+                </li>
+                <li>
+                    <p>Tarea 1</p>
+                    <button class="check_button">,</button>
+                    <button class="trash_button">🗑️</button>
+                </li>
+                <li>
+                    <p>Tarea 1</p>
+                    <button class="check_button">,</button>
+                    <button class="trash_button">🗑️</button>
+                </li>
+                <li>
+                    <p>Tarea 1</p>
+                    <button class="check_button">,</button>
+                    <button class="trash_button">🗑️</button>
+                </li>
+                <li>
+                    <p>Tarea 1</p>
+                    <button class="check_button">,</button>
+                    <button class="trash_button">🗑️</button>
+                </li>
+                <li>
+                    <p>Tarea 1</p>
+                    <button class="check_button">,</button>
+                    <button class="trash_button">🗑️</button>
+                </li>
             </ul>
         </div>
+    </div>
+    <div class="container_loading" id="onload">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <samp class="loading">Loading...</samp>
     </div>
 </body>
 </html>
