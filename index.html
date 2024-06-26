@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List App</title>
-    <link rel="stylesheet" href="css/stile.css">
+    <title>Document</title>
     <script type="module" src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/stile.css">
 </head>
+
 <body>
-    <header class="container">
-        <h1 class="title">Just do it.</h1>
+    <header class="header">
+        <h1 class="header__title">Just do it.</h1>
     </header>
     <main class="main">
-        <section class="add_task">
-            <input type="text" id="task_input" placeholder="Add a Task.">
-            <button class="add_task" id="enter">I Got This!</button>
+        <section class="add__task">
+            <input type="text" id="task__input" placeholder="Add a task.">
+            <button class="add__task__button" id="enter">I Got This!</button>
         </section>
         <section class="date">
-            <p class="date_time" id="time"></p>
+            <p class="date__time" id="time"></p>
         </section>
-        <section class="task_list">
-            <ul class="task_listItem">
-                <!--<li class="tasks" data-id="1">
-                    <span class="todo_item">Example</span>
-                    <div class="button">
+        <section class="task__list">
+            <ul class="task__list__items">
+                <!-- <li class="tasks" data-id="1">
+                    <span class="todo__item">prueba</span>
+                    <div class="buttons">
                         <a href="" class="check-btn">
-                            <img src="storage/img/unnamed.png" alt="check">
+                            <img src="storage/img/check-svgrepo-com.svg" alt="check">
                         </a>
                         <a href="" class="delete-btn">
-                            <img src="storage/img/images.png" alt="trash">
+                            <img src="storage/img/trash-svgrepo-com.svg" alt="trash">
                         </a>
                     </div>
-                </li>-->
+                </li> -->
             </ul>
         </section>
     </main>
 </body>
+
 </html>

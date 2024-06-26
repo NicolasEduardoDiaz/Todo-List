@@ -1,130 +1,147 @@
+@import url(variables.css);
+
 * {
-    background-color: #143543;
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-.title,
-.time,
-.placeholder_bar {
+body {
+    background: linear-gradient(to left, var(--color-3), var(--color-2));
+    background-size: 100%;
+    min-height: 100vh;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 2rem;
+    min-height: 25vh;
+    width: 100%;
+}
+
+.header__title {
+    color: var(--color-1);
+    letter-spacing: 0.20rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    max-width: 480px;
+    font-weight: normal;
+}
+
+.add__task,
+.task__list {
+    width: 80%;
+    display: flex;
     justify-content: center;
 }
 
-.title {
-    font-size: 4rem;
-    margin: 20px 0;
-}
-
-.container h1,
-.time,
-.list {
-    color: #fff;    
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 1.8rem;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-}
-
-.todo_information {
-    overflow-y: scroll;
-    height: 65vh;
+.add__task input {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    max-width: 500px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: rgb(26, 25, 25);
+    color: var(--color-1);
+    outline-style: none;
 }
 
-.todo_information li {
+.add__task__button {
+    padding: 12px;
+    border: none;
+    font-size: 1rem;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    min-width: 100px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add__task__button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.task__list__items {
+    max-width: 420px;
+    max-height: var(--height--task--list);
+    width: 100%;
+    overflow: auto;
+    animation: load 0.5s forwards;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.delete__btn,
+.check__btn {
+    width: 30px;
+    height: 30px;
+    background: aliceblue;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.delete__btn {
+    background-image: url(../storage/img/images.png);
+}
+
+.check__btn {
+    background-image: url(../storage/img/unnamed.png);
+}
+
+.delete__btn:hover,
+.check__btn:hover {
+    filter: invert(1);
+    transform: scale(1.1);
+}
+
+.tasks {
+    margin: 0.6rem;
+    font-size: 19px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.56);
-    gap: 15px;
-    height: 50px;
-    border-radius: 50px;
-    width: 400px;
-    padding: 0 15px;
-}
-
-.todo_information li p {
-    margin: 0;
-    flex-grow: 1;
-    text-align: left;
-    background: none;
-    color: #fff;
-}
-
-.input_container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    color: #000;
-    border-radius: 50%;
-    height: 45px;
-    width: 45px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    filter: invert(1);
-}
-
-.Gotthis {
-    height: 45px;
-    width: 100px;
-    border-radius: 0;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    font-size: 1rem;
-    margin-left: -10px;
-}
-
-.placeholder_bar {
-    width: 500px;
-    height: 45px;
-    background-color: rgba(0, 0, 0, 0.56);
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    color: #fff;
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-}
-
-button.check_button,
-button.trash_button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #fff;
-    color: #000;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-button.check_button:hover,
-button.trash_button:hover {
-    filter: invert(1);
+    padding: 0.25em 0.5em;
+    border-radius: 30px;
+    background: rgb(26, 27, 27);
+    color: var(--color-1);
 }
 
 .completed {
+    background: #4142429c;
+    color: var(--color-1);
+    filter: brightness(0.5);
     text-decoration: line-through;
-    color: #aaaaaa;
+}
+
+.date{
+    margin: 1.2rem 0 0.6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.fecha{
+    color: var(--color-1);
 }
