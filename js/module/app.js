@@ -54,4 +54,5 @@ export const getAllTask = async () => {
     let res = await fetch(url, options);
     let data = await res.json();
     return data;
-  }
+  } 
+  
